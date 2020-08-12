@@ -3,11 +3,13 @@ import './App.css';
 import HomePage from './components/Homepage'
 import {Switch,Route} from 'react-router-dom'
 import Countries from './components/Countries';
+import ReduxCircle from './components/ReduxCircle';
 
 function App() {
   return (
     <div className="App">
       <Switch>
+        <Route path="/redux" component={ReduxCircle} />
         <Route path="/countries" component={Countries} />
         <Route component={HomePage} />
       </Switch>
