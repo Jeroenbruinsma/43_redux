@@ -1,14 +1,10 @@
 const initialState = {
-    someDetails: "Pien"
-
 }
 
-export default (state = initialState, { type, payload }) => {
-    switch (type) {
-
-    case "typeName":
-        return { ...state, ...payload }
-
+export default (state = initialState, action) => {
+    switch (action.type) {
+    case "FETCH_DETAILS":
+        return action.payload
     default:
         return state
     }
