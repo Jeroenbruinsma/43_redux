@@ -7,14 +7,17 @@ import ReduxCircle from './components/ReduxCircle';
 import Details from './components/Details';
 import LoginPage from './components/Login';
 import Tree from './components/Tree';
+import { useSelector } from 'react-redux';
+import { userLoggedIn } from './store/user/selector';
 
 function App() {
+  const loggedIn = useSelector(userLoggedIn)
   return (
     <div className="App">
       <nav>
         <Link to="/tree"> goto Tree</Link>
         <br/>
-        <Link to="/login"> goto login</Link>
+        { !loggedIn ? <Link to="/login"> goto login</Link> : "login"}
       </nav>
       <Switch>
         <Route path="/login" component={LoginPage} />
