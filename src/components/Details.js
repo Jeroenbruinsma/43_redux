@@ -12,7 +12,7 @@ export default function Details() {
 
     useEffect(()=>{
         console.log("use effect of details page")
-        dispatch(fetchDetails())    
+        dispatch(fetchDetails(params.id))    
     },[])
 
     console.log("what is step 9 for details??", details)

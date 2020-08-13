@@ -1,0 +1,1 @@
+axios.get(URL, { headers: { Authorization: `Bearer ${token}` }});
